@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLQuanCaPheModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="func_DSAccount_Result">
+    <Property Name="Id_Account" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id_User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_DSKH_Result">
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Points" Type="Int32" />
+    <Property Name="Level" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_DSNhanvien_Result">
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoB" Type="DateTime" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_ktlogin_Result">
+    <Property Name="kq" Type="Int32" />
+  </ComplexType>
+  <ComplexType Name="func_layAccount_Result">
+    <Property Name="Id_Account" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id_User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_LayLoai_Result">
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_Menu_Result">
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+  </ComplexType>
+  <ComplexType Name="func_thongtin_Result">
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoB" Type="DateTime" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_Timaccount_Result">
+    <Property Name="Id_Account" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id_User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_TimFandB_Result">
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+  </ComplexType>
+  <ComplexType Name="func_timkh_Result">
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Points" Type="Int32" />
+    <Property Name="Level" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_TimMon_Result">
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+  </ComplexType>
+  <ComplexType Name="func_TimMontheoLoai_Result">
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+  </ComplexType>
+  <ComplexType Name="func_TimNV_Result">
+    <Property Name="id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dob" Type="DateTime" />
+    <Property Name="phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="func_Top1nhanvien_Result">
+    <Property Name="PayDay" Type="DateTime" Nullable="false" />
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Result" Type="Double" />
+  </ComplexType>
+  <ComplexType Name="func_Top5Mon_Result">
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="SLBAN" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id_Account" />
+    </Key>
+    <Property Name="Id_Account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PassWord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Id_User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_Accounts_Staff" FromRole="Accounts" ToRole="Staff" />
+  </EntityType>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Discount" Type="Double" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date_export" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Bill_Customer" FromRole="Bill" ToRole="Customer" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_Bill_Staff" FromRole="Bill" ToRole="Staff" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Bill" FromRole="Bill" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Phone" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Points" Type="Int32" />
+    <Property Name="Level" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Customer" FromRole="Customer" ToRole="Bill" />
+    <NavigationProperty Name="Discount" Relationship="Self.FK_Customer_Discount" FromRole="Customer" ToRole="Discount" />
+  </EntityType>
+  <EntityType Name="Discount">
+    <Key>
+      <PropertyRef Name="Level" />
+    </Key>
+    <Property Name="Level" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Discount_Rate" Type="Int32" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Customer_Discount" FromRole="Discount" ToRole="Customer" />
+  </EntityType>
+  <EntityType Name="KPI">
+    <Key>
+      <PropertyRef Name="Id_Staff" />
+      <PropertyRef Name="PayDay" />
+    </Key>
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PayDay" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Target" Type="Double" />
+    <Property Name="Result" Type="Double" />
+    <Property Name="Bonus" Type="Double" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="Id_Manager" />
+    </Key>
+    <Property Name="Id_Manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoB" Type="DateTime" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="Id_Product" />
+    </Key>
+    <Property Name="Id_Product" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FandB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Sizes" Relationship="Self.FK_Size_Menu" FromRole="Menu" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="ID_Order" />
+      <PropertyRef Name="ID_Product" />
+      <PropertyRef Name="Size" />
+    </Key>
+    <Property Name="ID_Order" Type="Int32" Nullable="false" />
+    <Property Name="ID_Product" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <NavigationProperty Name="Bill" Relationship="Self.FK_OrderDetail_Bill" FromRole="OrderDetail" ToRole="Bill" />
+    <NavigationProperty Name="Size1" Relationship="Self.FK_OrderDetail_Size" FromRole="OrderDetail" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="Id_Staff" />
+      <PropertyRef Name="PayDay" />
+    </Key>
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PayDay" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Basic_Salary" Type="Double" />
+    <Property Name="KPI" Type="Double" />
+    <Property Name="Fine" Type="Double" />
+    <Property Name="Salary1" Type="Double" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="Id_Product" />
+      <PropertyRef Name="Size1" />
+    </Key>
+    <Property Name="Id_Product" Type="Int32" Nullable="false" />
+    <Property Name="Size1" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Double" />
+    <NavigationProperty Name="Menu" Relationship="Self.FK_Size_Menu" FromRole="Size" ToRole="Menu" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Size" FromRole="Size" ToRole="OrderDetail" />
+    <NavigationProperty Name="Temps" Relationship="Self.FK_Temp_Size" FromRole="Size" ToRole="Temp" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Id_Staff" />
+    </Key>
+    <Property Name="Id_Staff" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DoB" Type="DateTime" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Accounts" Relationship="Self.FK_Accounts_Staff" FromRole="Staff" ToRole="Accounts" />
+    <NavigationProperty Name="Bills" Relationship="Self.FK_Bill_Staff" FromRole="Staff" ToRole="Bill" />
+  </EntityType>
+  <EntityType Name="Temp">
+    <Key>
+      <PropertyRef Name="ID_Order" />
+      <PropertyRef Name="ID_Product" />
+      <PropertyRef Name="Size" />
+    </Key>
+    <Property Name="ID_Order" Type="Int32" Nullable="false" />
+    <Property Name="ID_Product" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <NavigationProperty Name="Size1" Relationship="Self.FK_Temp_Size" FromRole="Temp" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="Turnover">
+    <Key>
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Earnings" Type="Double" />
+    <Property Name="Outgoing" Type="Double" />
+    <Property Name="Profit" Type="Double" />
+  </EntityType>
+  <Association Name="FK_Accounts_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="Accounts" Type="Self.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id_Staff" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="Id_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Phone" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="Phone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bill_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Id_Staff" />
+      </Principal>
+      <Dependent Role="Bill">
+        <PropertyRef Name="Id_Staff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Bill">
+    <End Role="Bill" Type="Self.Bill" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bill">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ID_Order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Customer_Discount">
+    <End Role="Discount" Type="Self.Discount" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Discount">
+        <PropertyRef Name="Level" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="Level" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Size_Menu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="Size" Type="Self.Size" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="Id_Product" />
+      </Principal>
+      <Dependent Role="Size">
+        <PropertyRef Name="Id_Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Size">
+    <End Role="Size" Type="Self.Size" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="Id_Product" />
+        <PropertyRef Name="Size1" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ID_Product" />
+        <PropertyRef Name="Size" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Temp_Size">
+    <End Role="Size" Type="Self.Size" Multiplicity="1" />
+    <End Role="Temp" Type="Self.Temp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="Id_Product" />
+        <PropertyRef Name="Size1" />
+      </Principal>
+      <Dependent Role="Temp">
+        <PropertyRef Name="ID_Product" />
+        <PropertyRef Name="Size" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLQuanCaPheEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Bills" EntityType="Self.Bill" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Discounts" EntityType="Self.Discount" />
+    <EntitySet Name="KPIs" EntityType="Self.KPI" />
+    <EntitySet Name="Managers" EntityType="Self.Manager" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="Salaries" EntityType="Self.Salary" />
+    <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <EntitySet Name="Staffs" EntityType="Self.Staff" />
+    <EntitySet Name="Temps" EntityType="Self.Temp" />
+    <EntitySet Name="Turnovers" EntityType="Self.Turnover" />
+    <AssociationSet Name="FK_Accounts_Staff" Association="Self.FK_Accounts_Staff">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_Customer" Association="Self.FK_Bill_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bill_Staff" Association="Self.FK_Bill_Staff">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Bill" EntitySet="Bills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Bill" Association="Self.FK_OrderDetail_Bill">
+      <End Role="Bill" EntitySet="Bills" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Customer_Discount" Association="Self.FK_Customer_Discount">
+      <End Role="Discount" EntitySet="Discounts" />
+      <End Role="Customer" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Size_Menu" Association="Self.FK_Size_Menu">
+      <End Role="Menu" EntitySet="Menus" />
+      <End Role="Size" EntitySet="Sizes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Size" Association="Self.FK_OrderDetail_Size">
+      <End Role="Size" EntitySet="Sizes" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Temp_Size" Association="Self.FK_Temp_Size">
+      <End Role="Size" EntitySet="Sizes" />
+      <End Role="Temp" EntitySet="Temps" />
+    </AssociationSet>
+    <FunctionImport Name="func_DSAccount" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_DSAccount_Result)" />
+    <FunctionImport Name="func_DSKH" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_DSKH_Result)" />
+    <FunctionImport Name="func_DSNhanvien" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_DSNhanvien_Result)" />
+    <FunctionImport Name="func_ktlogin" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_ktlogin_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_layAccount" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_layAccount_Result)">
+      <Parameter Name="ma" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_LayLoai" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_LayLoai_Result)">
+      <Parameter Name="key" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_Menu" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_Menu_Result)" />
+    <FunctionImport Name="func_thongtin" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_thongtin_Result)">
+      <Parameter Name="ma" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_Timaccount" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_Timaccount_Result)">
+      <Parameter Name="ma" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_TimFandB" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_TimFandB_Result)">
+      <Parameter Name="key" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_timkh" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_timkh_Result)">
+      <Parameter Name="sdt" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_TimMon" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_TimMon_Result)">
+      <Parameter Name="ten" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_TimMontheoLoai" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_TimMontheoLoai_Result)">
+      <Parameter Name="key" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="func_TimNV" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_TimNV_Result)">
+      <Parameter Name="key" Mode="In" Type="String" />
+      <Parameter Name="luachon" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="func_Top1nhanvien" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_Top1nhanvien_Result)" />
+    <FunctionImport Name="func_Top5Mon" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_Top5Mon_Result)" />
+    <FunctionImport Name="func_timMaNV" IsComposable="true" ReturnType="Collection(QLQuanCaPheModel.func_timMaNV_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="func_timMaNV_Result">
+    <Property Type="Int32" Name="Id_Account" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" />
+    <Property Type="String" Name="PassWord" Nullable="true" />
+    <Property Type="String" Name="Id_User" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Role" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

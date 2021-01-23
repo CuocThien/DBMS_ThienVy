@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F42D2272-25EB-42EB-A1B9-C39C79B87CCF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLQuanCafe</RootNamespace>
+    <AssemblyName>QLQuanCafe</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>Guna\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\cLogin.cs" />
+    <Compile Include="Controller\cManager.cs" />
+    <Compile Include="Controller\cShared.cs" />
+    <Compile Include="Controller\cStaff.cs" />
+    <Compile Include="Controller\DBConnection.cs" />
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="View\Admin\frm_AddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_AddMenu.Designer.cs">
+      <DependentUpon>frm_AddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\frm_ComputeSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_ComputeSalary.Designer.cs">
+      <DependentUpon>frm_ComputeSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\frm_ComputeTurnover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_ComputeTurnover.Designer.cs">
+      <DependentUpon>frm_ComputeTurnover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\frm_EditMenuInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_EditMenuInfor.Designer.cs">
+      <DependentUpon>frm_EditMenuInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\frm_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_Manager.Designer.cs">
+      <DependentUpon>frm_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCManageCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCManageCustomers.Designer.cs">
+      <DependentUpon>UCManageCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCMenu.Designer.cs">
+      <DependentUpon>UCMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCTopStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCTopStaff.Designer.cs">
+      <DependentUpon>UCTopStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCTurnover.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCTurnover.Designer.cs">
+      <DependentUpon>UCTurnover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Both\frm_Top5inMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Both\frm_Top5inMenu.Designer.cs">
+      <DependentUpon>frm_Top5inMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customer\frm_Menu.Designer.cs">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\frm_AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Staff\frm_AddCustomer.Designer.cs">
+      <DependentUpon>frm_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Both\frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Both\frm_ChangePassword.Designer.cs">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Both\frm_StaffEditInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Both\frm_StaffEditInformation.Designer.cs">
+      <DependentUpon>frm_StaffEditInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\frm_StaffRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin\frm_StaffRegister.Designer.cs">
+      <DependentUpon>frm_StaffRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Staff\frm_Menu_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Staff\frm_Menu_Order.Designer.cs">
+      <DependentUpon>frm_Menu_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Both\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Both\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Staff\UCOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Staff\UCOrder.Designer.cs">
+      <DependentUpon>UCOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCSalary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCSalary.Designer.cs">
+      <DependentUpon>UCSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\UCStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Admin\UCStaff.Designer.cs">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Admin\frm_AddMenu.resx">
+      <DependentUpon>frm_AddMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\frm_ComputeSalary.resx">
+      <DependentUpon>frm_ComputeSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\frm_ComputeTurnover.resx">
+      <DependentUpon>frm_ComputeTurnover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\frm_EditMenuInfor.resx">
+      <DependentUpon>frm_EditMenuInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\frm_Manager.resx">
+      <DependentUpon>frm_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCManageCustomers.resx">
+      <DependentUpon>UCManageCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCMenu.resx">
+      <DependentUpon>UCMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCTopStaff.resx">
+      <DependentUpon>UCTopStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCTurnover.resx">
+      <DependentUpon>UCTurnover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Both\frm_Top5inMenu.resx">
+      <DependentUpon>frm_Top5inMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customer\frm_Menu.resx">
+      <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Staff\frm_AddCustomer.resx">
+      <DependentUpon>frm_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Both\frm_ChangePassword.resx">
+      <DependentUpon>frm_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Both\frm_StaffEditInformation.resx">
+      <DependentUpon>frm_StaffEditInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\frm_StaffRegister.resx">
+      <DependentUpon>frm_StaffRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Staff\frm_Menu_Order.resx">
+      <DependentUpon>frm_Menu_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Both\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Staff\UCOrder.resx">
+      <DependentUpon>UCOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCSalary.resx">
+      <DependentUpon>UCSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin\UCStaff.resx">
+      <DependentUpon>UCStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

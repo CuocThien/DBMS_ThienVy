@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLQuanCaPheModelStoreContainer" CdmEntityContainer="QLQuanCaPheEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Bill">
+        <MappingFragment StoreEntitySet="Bill">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="Date_export" ColumnName="Date_export" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discounts">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Discount">
+        <MappingFragment StoreEntitySet="Discount">
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Discount_Rate" ColumnName="Discount_Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIs">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.KPI">
+        <MappingFragment StoreEntitySet="KPI">
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="PayDay" ColumnName="PayDay" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Manager">
+        <MappingFragment StoreEntitySet="Manager">
+          <ScalarProperty Name="Id_Manager" ColumnName="Id_Manager" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
+          <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Salary">
+        <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="PayDay" ColumnName="PayDay" />
+          <ScalarProperty Name="Basic_Salary" ColumnName="Basic_Salary" />
+          <ScalarProperty Name="KPI" ColumnName="KPI" />
+          <ScalarProperty Name="Fine" ColumnName="Fine" />
+          <ScalarProperty Name="Salary1" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Size">
+        <MappingFragment StoreEntitySet="Size">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Size1" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Temps">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Temp">
+        <MappingFragment StoreEntitySet="Temp">
+          <ScalarProperty Name="ID_Order" ColumnName="ID_Order" />
+          <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turnovers">
+      <EntityTypeMapping TypeName="QLQuanCaPheModel.Turnover">
+        <MappingFragment StoreEntitySet="Turnover">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Earnings" ColumnName="Earnings" />
+          <ScalarProperty Name="Outgoing" ColumnName="Outgoing" />
+          <ScalarProperty Name="Profit" ColumnName="Profit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_DSAccount" FunctionImportName="func_DSAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_DSAccount_Result">
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_DSKH" FunctionImportName="func_DSKH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_DSKH_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_DSNhanvien" FunctionImportName="func_DSNhanvien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_DSNhanvien_Result">
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_ktlogin" FunctionImportName="func_ktlogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_ktlogin_Result">
+          <ScalarProperty Name="kq" ColumnName="kq" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_layAccount" FunctionImportName="func_layAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_layAccount_Result">
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_LayLoai" FunctionImportName="func_LayLoai">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_LayLoai_Result">
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_Menu" FunctionImportName="func_Menu">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_Menu_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_thongtin" FunctionImportName="func_thongtin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_thongtin_Result">
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DoB" ColumnName="DoB" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_Timaccount" FunctionImportName="func_Timaccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_Timaccount_Result">
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_TimFandB" FunctionImportName="func_TimFandB">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_TimFandB_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_timkh" FunctionImportName="func_timkh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_timkh_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Points" ColumnName="Points" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_TimMon" FunctionImportName="func_TimMon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_TimMon_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_TimMontheoLoai" FunctionImportName="func_TimMontheoLoai">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_TimMontheoLoai_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_TimNV" FunctionImportName="func_TimNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_TimNV_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="position" ColumnName="position" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_Top1nhanvien" FunctionImportName="func_Top1nhanvien">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_Top1nhanvien_Result">
+          <ScalarProperty Name="PayDay" ColumnName="PayDay" />
+          <ScalarProperty Name="Id_Staff" ColumnName="Id_Staff" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="QLQuanCaPheModel.Store.func_Top5Mon" FunctionImportName="func_Top5Mon">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_Top5Mon_Result">
+          <ScalarProperty Name="Id_Product" ColumnName="Id_Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="FandB" ColumnName="FandB" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SLBAN" ColumnName="SLBAN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="func_timMaNV" FunctionName="QLQuanCaPheModel.Store.func_timMaNV">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QLQuanCaPheModel.func_timMaNV_Result">
+          <ScalarProperty Name="Id_Account" ColumnName="Id_Account" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Id_User" ColumnName="Id_User" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
