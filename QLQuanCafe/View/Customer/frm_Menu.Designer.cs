@@ -37,7 +37,8 @@
             // 
             // pnl_container
             // 
-            this.pnl_container.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_container.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_container.BackgroundImage")));
+            this.pnl_container.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_container.Location = new System.Drawing.Point(0, 0);
             this.pnl_container.Name = "pnl_container";
             this.pnl_container.Size = new System.Drawing.Size(1074, 750);
@@ -45,11 +46,12 @@
             // 
             // pnl_btn
             // 
-            this.pnl_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_btn.BackgroundImage")));
             this.pnl_btn.Controls.Add(this.btn_Exit);
-            this.pnl_btn.Location = new System.Drawing.Point(1075, 2);
+            this.pnl_btn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnl_btn.Location = new System.Drawing.Point(1074, 0);
             this.pnl_btn.Name = "pnl_btn";
-            this.pnl_btn.Size = new System.Drawing.Size(40, 40);
+            this.pnl_btn.Size = new System.Drawing.Size(40, 750);
             this.pnl_btn.TabIndex = 0;
             // 
             // btn_Exit
@@ -57,7 +59,6 @@
             this.btn_Exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Exit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Exit.Image")));
             this.btn_Exit.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_Exit.Location = new System.Drawing.Point(0, 0);
