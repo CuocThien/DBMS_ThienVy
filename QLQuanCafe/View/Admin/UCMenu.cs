@@ -145,5 +145,6 @@ namespace QLQuanCafe.View.Admin
             this.dgv_Product.Refresh();
             this.dgv_Product.Update();
         }
+
     }
 }

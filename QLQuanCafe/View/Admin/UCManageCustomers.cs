@@ -16,8 +16,19 @@ namespace QLQuanCafe.View.Admin
         public UCManageCustomers(DataTable data,string tk, string mk)
         {
             InitializeComponent();
+
             if (data.Rows.Count > 0)
             {
+                if(data.Rows.Count==3)
+                {
+                    lbl_Top3Cus.Visible = true;
+                    lbl_Manager.Visible = false;
+                }    
+                else
+                {
+                    lbl_Manager.Visible = true;
+                    lbl_Top3Cus.Visible = false;
+                }    
                 for (int i = 0; i < data.Rows.Count; i++)
                 {
                     var item = data.Rows[i];

@@ -64,7 +64,7 @@
     <Compile Include="Controller\cManager.cs" />
     <Compile Include="Controller\cShared.cs" />
     <Compile Include="Controller\cStaff.cs" />
-    <Compile Include="Controller\DBConnection.cs" />
+    <Compile Include="Model\DBConnection.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="View\Admin\frm_AddMenu.cs">
       <SubType>Form</SubType>
@@ -156,10 +156,10 @@
     <Compile Include="View\Admin\frm_StaffRegister.Designer.cs">
       <DependentUpon>frm_StaffRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Staff\frm_Menu_Order.cs">
+    <Compile Include="View\Both\frm_Menu_Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Staff\frm_Menu_Order.Designer.cs">
+    <Compile Include="View\Both\frm_Menu_Order.Designer.cs">
       <DependentUpon>frm_Menu_Order.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Both\frm_Login.cs">
@@ -233,7 +233,7 @@
     <EmbeddedResource Include="View\Admin\frm_StaffRegister.resx">
       <DependentUpon>frm_StaffRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Staff\frm_Menu_Order.resx">
+    <EmbeddedResource Include="View\Both\frm_Menu_Order.resx">
       <DependentUpon>frm_Menu_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Both\frm_Login.resx">
@@ -274,8 +274,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

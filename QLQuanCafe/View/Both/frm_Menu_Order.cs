@@ -28,6 +28,15 @@ namespace QLQuanCafe
             dgv_Product.ColumnHeadersDefaultCellStyle.BackColor = Color.MistyRose;
             dgv_Product.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dgv_Product.BackgroundColor = Color.FromArgb(242, 232, 196);
+            var x = Id_Staff.Substring(0, 2);
+            if(x=="QL")
+            {
+                btn_BackToManager.Visible = true;
+            }
+            else
+            {
+                btn_BackToManager.Visible = false;
+            }
             UCOrder uCOrder = new UCOrder(tk, mk);
             this.pnl_Order.Controls.Add(uCOrder);
             this.Id_Staff = Id_Staff;
@@ -251,6 +260,14 @@ namespace QLQuanCafe
                 err = null;
                 return;
             }
+        }
+
+        private void btn_BackToManager_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Manager frm = new frm_Manager(Id_Staff, FullName, tk, mk);
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

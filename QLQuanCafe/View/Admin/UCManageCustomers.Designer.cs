@@ -34,15 +34,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Customers = new Guna.UI.WinForms.GunaDataGridView();
-            this.pnl_Container = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.Col_Cus_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Points = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnl_Container = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_Manager = new Guna.UI.WinForms.GunaLabel();
+            this.lbl_Top3Cus = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Customers)).BeginInit();
             this.pnl_Container.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,37 +114,6 @@
             this.dgv_Customers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_Customers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // pnl_Container
-            // 
-            this.pnl_Container.Controls.Add(this.panel1);
-            this.pnl_Container.Controls.Add(this.gunaLabel4);
-            this.pnl_Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_Container.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Container.Name = "pnl_Container";
-            this.pnl_Container.Size = new System.Drawing.Size(1074, 750);
-            this.pnl_Container.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dgv_Customers);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 126);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1074, 624);
-            this.panel1.TabIndex = 6;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel4.Font = new System.Drawing.Font("Blackadder ITC", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.ForeColor = System.Drawing.Color.Yellow;
-            this.gunaLabel4.Location = new System.Drawing.Point(193, 0);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(686, 123);
-            this.gunaLabel4.TabIndex = 5;
-            this.gunaLabel4.Text = "Manage Customer";
-            // 
             // Col_Cus_Id
             // 
             this.Col_Cus_Id.FillWeight = 10F;
@@ -184,6 +154,50 @@
             this.col_level.HeaderText = "Bậc";
             this.col_level.Name = "col_level";
             // 
+            // pnl_Container
+            // 
+            this.pnl_Container.Controls.Add(this.panel1);
+            this.pnl_Container.Controls.Add(this.lbl_Top3Cus);
+            this.pnl_Container.Controls.Add(this.lbl_Manager);
+            this.pnl_Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_Container.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Container.Name = "pnl_Container";
+            this.pnl_Container.Size = new System.Drawing.Size(1074, 750);
+            this.pnl_Container.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgv_Customers);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1074, 624);
+            this.panel1.TabIndex = 6;
+            // 
+            // lbl_Manager
+            // 
+            this.lbl_Manager.AutoSize = true;
+            this.lbl_Manager.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Manager.Font = new System.Drawing.Font("Blackadder ITC", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Manager.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Manager.Location = new System.Drawing.Point(193, 0);
+            this.lbl_Manager.Name = "lbl_Manager";
+            this.lbl_Manager.Size = new System.Drawing.Size(686, 123);
+            this.lbl_Manager.TabIndex = 5;
+            this.lbl_Manager.Text = "Manage Customer";
+            // 
+            // lbl_Top3Cus
+            // 
+            this.lbl_Top3Cus.AutoSize = true;
+            this.lbl_Top3Cus.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Top3Cus.Font = new System.Drawing.Font("Blackadder ITC", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Top3Cus.ForeColor = System.Drawing.Color.Yellow;
+            this.lbl_Top3Cus.Location = new System.Drawing.Point(240, 0);
+            this.lbl_Top3Cus.Name = "lbl_Top3Cus";
+            this.lbl_Top3Cus.Size = new System.Drawing.Size(604, 123);
+            this.lbl_Top3Cus.TabIndex = 5;
+            this.lbl_Top3Cus.Text = "Top 3 Customers";
+            // 
             // UCManageCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +225,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_level;
         private System.Windows.Forms.Panel pnl_Container;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel lbl_Manager;
+        private Guna.UI.WinForms.GunaLabel lbl_Top3Cus;
     }
 }

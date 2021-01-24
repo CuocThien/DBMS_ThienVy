@@ -37,7 +37,11 @@
             this.pnl_Container = new System.Windows.Forms.Panel();
             this.pnl_Order = new System.Windows.Forms.Panel();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chb_OutofStock = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
+            this.btn_ResetStatus = new Guna.UI.WinForms.GunaImageButton();
+            this.btn_OutOfStock = new Guna.UI.WinForms.GunaImageButton();
             this.txt_Search = new Guna.UI.WinForms.GunaTextBox();
             this.pnl_MenuProducts = new System.Windows.Forms.Panel();
             this.dgv_Product = new Guna.UI.WinForms.GunaDataGridView();
@@ -49,6 +53,7 @@
             this.col_Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.pnl_MenuControl = new System.Windows.Forms.Panel();
+            this.btn_Top5 = new Guna.UI.WinForms.GunaButton();
             this.btn_EditInformation = new Guna.UI.WinForms.GunaImageButton();
             this.btn_Exit = new Guna.UI.WinForms.GunaImageButton();
             this.pnl_Select = new System.Windows.Forms.Panel();
@@ -69,19 +74,15 @@
             this.rbtn_Breakfast = new Guna.UI.WinForms.GunaRadioButton();
             this.lbl_Staff_Name = new Guna.UI.WinForms.GunaLabel();
             this.lbl_Staff_Id = new Guna.UI.WinForms.GunaLabel();
-            this.btn_Top5 = new Guna.UI.WinForms.GunaButton();
-            this.btn_OutOfStock = new Guna.UI.WinForms.GunaImageButton();
-            this.btn_ResetStatus = new Guna.UI.WinForms.GunaImageButton();
-            this.chb_OutofStock = new Guna.UI.WinForms.GunaCheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_BackToManager = new Guna.UI.WinForms.GunaImageButton();
             this.pnl_Container.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.pnl_MenuProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).BeginInit();
             this.pnl_MenuControl.SuspendLayout();
             this.pnl_Select.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Container
@@ -124,6 +125,28 @@
             this.pnl_Menu.Size = new System.Drawing.Size(874, 750);
             this.pnl_Menu.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(200, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // chb_OutofStock
+            // 
+            this.chb_OutofStock.BaseColor = System.Drawing.Color.White;
+            this.chb_OutofStock.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chb_OutofStock.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.chb_OutofStock.FillColor = System.Drawing.Color.White;
+            this.chb_OutofStock.Location = new System.Drawing.Point(792, 39);
+            this.chb_OutofStock.Name = "chb_OutofStock";
+            this.chb_OutofStock.Size = new System.Drawing.Size(76, 20);
+            this.chb_OutofStock.TabIndex = 10;
+            this.chb_OutofStock.Text = "Hết hàng";
+            // 
             // gunaPictureBox3
             // 
             this.gunaPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -138,6 +161,36 @@
             this.gunaPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox3.TabIndex = 9;
             this.gunaPictureBox3.TabStop = false;
+            // 
+            // btn_ResetStatus
+            // 
+            this.btn_ResetStatus.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ResetStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ResetStatus.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ResetStatus.Image = ((System.Drawing.Image)(resources.GetObject("btn_ResetStatus.Image")));
+            this.btn_ResetStatus.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_ResetStatus.Location = new System.Drawing.Point(782, 65);
+            this.btn_ResetStatus.Name = "btn_ResetStatus";
+            this.btn_ResetStatus.OnHoverImage = null;
+            this.btn_ResetStatus.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_ResetStatus.Size = new System.Drawing.Size(40, 40);
+            this.btn_ResetStatus.TabIndex = 1;
+            this.btn_ResetStatus.Click += new System.EventHandler(this.btn_ResetStatus_Click);
+            // 
+            // btn_OutOfStock
+            // 
+            this.btn_OutOfStock.BackColor = System.Drawing.Color.Gray;
+            this.btn_OutOfStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OutOfStock.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_OutOfStock.Image = ((System.Drawing.Image)(resources.GetObject("btn_OutOfStock.Image")));
+            this.btn_OutOfStock.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_OutOfStock.Location = new System.Drawing.Point(828, 65);
+            this.btn_OutOfStock.Name = "btn_OutOfStock";
+            this.btn_OutOfStock.OnHoverImage = null;
+            this.btn_OutOfStock.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_OutOfStock.Size = new System.Drawing.Size(40, 40);
+            this.btn_OutOfStock.TabIndex = 1;
+            this.btn_OutOfStock.Click += new System.EventHandler(this.btn_OutOfStock_Click);
             // 
             // txt_Search
             // 
@@ -292,6 +345,7 @@
             // 
             this.pnl_MenuControl.BackColor = System.Drawing.Color.Transparent;
             this.pnl_MenuControl.Controls.Add(this.btn_Top5);
+            this.pnl_MenuControl.Controls.Add(this.btn_BackToManager);
             this.pnl_MenuControl.Controls.Add(this.btn_EditInformation);
             this.pnl_MenuControl.Controls.Add(this.btn_Exit);
             this.pnl_MenuControl.Controls.Add(this.pnl_Select);
@@ -302,6 +356,34 @@
             this.pnl_MenuControl.Name = "pnl_MenuControl";
             this.pnl_MenuControl.Size = new System.Drawing.Size(200, 750);
             this.pnl_MenuControl.TabIndex = 0;
+            // 
+            // btn_Top5
+            // 
+            this.btn_Top5.AnimationHoverSpeed = 0.07F;
+            this.btn_Top5.AnimationSpeed = 0.03F;
+            this.btn_Top5.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Top5.BaseColor = System.Drawing.Color.Transparent;
+            this.btn_Top5.BorderColor = System.Drawing.Color.SaddleBrown;
+            this.btn_Top5.BorderSize = 2;
+            this.btn_Top5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Top5.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Top5.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Top5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Top5.ForeColor = System.Drawing.Color.Black;
+            this.btn_Top5.Image = ((System.Drawing.Image)(resources.GetObject("btn_Top5.Image")));
+            this.btn_Top5.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Top5.Location = new System.Drawing.Point(3, 127);
+            this.btn_Top5.Name = "btn_Top5";
+            this.btn_Top5.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btn_Top5.OnHoverBorderColor = System.Drawing.Color.SaddleBrown;
+            this.btn_Top5.OnHoverForeColor = System.Drawing.Color.Red;
+            this.btn_Top5.OnHoverImage = null;
+            this.btn_Top5.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Top5.Radius = 10;
+            this.btn_Top5.Size = new System.Drawing.Size(194, 38);
+            this.btn_Top5.TabIndex = 9;
+            this.btn_Top5.Text = "Top 5 món";
+            this.btn_Top5.Click += new System.EventHandler(this.btn_Top5_Click);
             // 
             // btn_EditInformation
             // 
@@ -585,85 +667,19 @@
             this.lbl_Staff_Id.TabIndex = 1;
             this.lbl_Staff_Id.Text = "Mã NV";
             // 
-            // btn_Top5
+            // btn_BackToManager
             // 
-            this.btn_Top5.AnimationHoverSpeed = 0.07F;
-            this.btn_Top5.AnimationSpeed = 0.03F;
-            this.btn_Top5.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Top5.BaseColor = System.Drawing.Color.Transparent;
-            this.btn_Top5.BorderColor = System.Drawing.Color.SaddleBrown;
-            this.btn_Top5.BorderSize = 2;
-            this.btn_Top5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Top5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Top5.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Top5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Top5.ForeColor = System.Drawing.Color.Black;
-            this.btn_Top5.Image = ((System.Drawing.Image)(resources.GetObject("btn_Top5.Image")));
-            this.btn_Top5.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Top5.Location = new System.Drawing.Point(3, 127);
-            this.btn_Top5.Name = "btn_Top5";
-            this.btn_Top5.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btn_Top5.OnHoverBorderColor = System.Drawing.Color.SaddleBrown;
-            this.btn_Top5.OnHoverForeColor = System.Drawing.Color.Red;
-            this.btn_Top5.OnHoverImage = null;
-            this.btn_Top5.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Top5.Radius = 10;
-            this.btn_Top5.Size = new System.Drawing.Size(194, 38);
-            this.btn_Top5.TabIndex = 9;
-            this.btn_Top5.Text = "Top 5 món";
-            this.btn_Top5.Click += new System.EventHandler(this.btn_Top5_Click);
-            // 
-            // btn_OutOfStock
-            // 
-            this.btn_OutOfStock.BackColor = System.Drawing.Color.Gray;
-            this.btn_OutOfStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_OutOfStock.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_OutOfStock.Image = ((System.Drawing.Image)(resources.GetObject("btn_OutOfStock.Image")));
-            this.btn_OutOfStock.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_OutOfStock.Location = new System.Drawing.Point(828, 65);
-            this.btn_OutOfStock.Name = "btn_OutOfStock";
-            this.btn_OutOfStock.OnHoverImage = null;
-            this.btn_OutOfStock.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_OutOfStock.Size = new System.Drawing.Size(40, 40);
-            this.btn_OutOfStock.TabIndex = 1;
-            this.btn_OutOfStock.Click += new System.EventHandler(this.btn_OutOfStock_Click);
-            // 
-            // btn_ResetStatus
-            // 
-            this.btn_ResetStatus.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ResetStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ResetStatus.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ResetStatus.Image = ((System.Drawing.Image)(resources.GetObject("btn_ResetStatus.Image")));
-            this.btn_ResetStatus.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_ResetStatus.Location = new System.Drawing.Point(782, 65);
-            this.btn_ResetStatus.Name = "btn_ResetStatus";
-            this.btn_ResetStatus.OnHoverImage = null;
-            this.btn_ResetStatus.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_ResetStatus.Size = new System.Drawing.Size(40, 40);
-            this.btn_ResetStatus.TabIndex = 1;
-            this.btn_ResetStatus.Click += new System.EventHandler(this.btn_ResetStatus_Click);
-            // 
-            // chb_OutofStock
-            // 
-            this.chb_OutofStock.BaseColor = System.Drawing.Color.White;
-            this.chb_OutofStock.CheckedOffColor = System.Drawing.Color.Gray;
-            this.chb_OutofStock.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.chb_OutofStock.FillColor = System.Drawing.Color.White;
-            this.chb_OutofStock.Location = new System.Drawing.Point(792, 39);
-            this.chb_OutofStock.Name = "chb_OutofStock";
-            this.chb_OutofStock.Size = new System.Drawing.Size(76, 20);
-            this.chb_OutofStock.TabIndex = 10;
-            this.chb_OutofStock.Text = "Hết hàng";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.btn_BackToManager.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_BackToManager.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_BackToManager.Image = ((System.Drawing.Image)(resources.GetObject("btn_BackToManager.Image")));
+            this.btn_BackToManager.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_BackToManager.Location = new System.Drawing.Point(8, 81);
+            this.btn_BackToManager.Name = "btn_BackToManager";
+            this.btn_BackToManager.OnHoverImage = null;
+            this.btn_BackToManager.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_BackToManager.Size = new System.Drawing.Size(40, 40);
+            this.btn_BackToManager.TabIndex = 1;
+            this.btn_BackToManager.Click += new System.EventHandler(this.btn_BackToManager_Click);
             // 
             // frm_Menu_Order
             // 
@@ -678,6 +694,7 @@
             this.pnl_Container.ResumeLayout(false);
             this.pnl_Menu.ResumeLayout(false);
             this.pnl_Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.pnl_MenuProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product)).EndInit();
@@ -685,7 +702,6 @@
             this.pnl_MenuControl.PerformLayout();
             this.pnl_Select.ResumeLayout(false);
             this.pnl_Select.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -732,5 +748,6 @@
         private Guna.UI.WinForms.GunaImageButton btn_ResetStatus;
         private Guna.UI.WinForms.GunaCheckBox chb_OutofStock;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaImageButton btn_BackToManager;
     }
 }
