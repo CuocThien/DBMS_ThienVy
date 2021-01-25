@@ -120,6 +120,16 @@ namespace QLQuanCafe.Controller
             DBConnection db = new DBConnection(tk, mk);
             return db.ExecuteQueryDataSet("select * from func_Luongnv (N'" + id + "','" + date +  "')", CommandType.Text);
         }
+        public static DataSet checksalary(string id, string date, string tk, string mk)
+        {
+            DBConnection db = new DBConnection(tk, mk);
+            return db.ExecuteQueryDataSet("select dbo.func_checksalary (N'"+id+"','" + date + "')", CommandType.Text);
+        }
+        public static DataSet checkPayday(string date, string tk, string mk)
+        {
+            DBConnection db = new DBConnection(tk, mk);
+            return db.ExecuteQueryDataSet("select dbo.func_checkPayday ('" + date + "')", CommandType.Text);
+        }
         public static DataSet Top1nhanvien(string tk, string mk)
         {
             DBConnection db = new DBConnection(tk, mk);

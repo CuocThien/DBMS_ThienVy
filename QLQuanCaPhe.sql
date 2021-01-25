@@ -349,11 +349,6 @@ as
 select top(99.99) percent Customer.* from Customer order by ID asc
 go
 
-go --Lấy danh sách các account
-create or alter view DSAccount_view
-as
-select * from Accounts
-
 go--Lấy bảng lương
 create or alter view DSLuong_view
 as
@@ -363,11 +358,6 @@ go--Lấy bảng doanh số
 create or alter view DoanhSo_view
 as
 select * from Turnover
-
-go--Lấy id món
-create or alter view ID_Pro_view
-as
-select Menu.Id_Product from Menu
 
 GO--lấy các món trong temp
 create or alter view Temp_view
@@ -563,11 +553,6 @@ else
 insert into @tblogin values (@kq)
 return
 end
-go --Lấy loại theo đồ ăn hoặc nước uống
-create or alter function func_LayLoai(@key nvarchar(50))
-returns table
-as
-return select DISTINCT(Category) from Menu where Menu.FandB like N'%'+@key+'%'
 
 go--Tìm món theo tên
 create or alter function func_TimMon(@ten nvarchar(max))
@@ -658,12 +643,6 @@ returns table
 as
 return select * from Accounts where Accounts.UserName = @username
 
-
-go--Lấy KPI (dùng để tính lương)
-create or alter function func_KPI (@id nvarchar(max),@PayDay date)
-returns table
-as
- return select * from KPI where @id=KPI.Id_Staff and Month(KPI.PayDay) = MONTH(@PayDay) and year(KPI.PayDay)=year(@PayDay)
 
  go--Tìm mã món (thêm size)
  create or alter function func_MaMon (@name nvarchar(max))
@@ -761,7 +740,6 @@ else
 	set @check=0;
 return @check
 end
-
 go--Kiểm tra id và ngày tháng (tính KPI)
 create or alter function func_checkPaydayKPI(@id nvarchar(50), @Payday date)
 returns int
@@ -769,6 +747,18 @@ as
 begin
 declare @check int
 if(exists(select * from KPI where @id=KPI.Id_Staff and Month(KPI.PayDay) = MONTH(@PayDay) and year(KPI.PayDay)=year(@PayDay)))
+	set @check=1;
+else
+	set @check=0;
+return @check
+end
+
+go--Kiểm tra lương nhân viên đó đã có hay chưa
+create or alter function func_checksalary(@id nvarchar(50), @payday date)
+returns int
+begin
+declare @check int
+if(exists(select * from Salary where @id=Salary.Id_Staff and Month(Salary.PayDay) = MONTH(@PayDay) and year(Salary.PayDay)=year(@PayDay)))
 	set @check=1;
 else
 	set @check=0;

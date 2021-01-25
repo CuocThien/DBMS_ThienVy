@@ -31,6 +31,12 @@ namespace QLQuanCafe.View.Admin
         private void btn_Compute_Click(object sender, EventArgs e)
         {
             var date = dtp_date.Value.ToString("MM-dd-yyyy");
+            var check = cManager.checkPayday(date, tk, mk).Tables[0].Rows[0][0].ToString();
+            if(check == "1")
+            {
+                MessageBox.Show("Tháng này đã tính doanh thu rồi!!!");
+                return;
+            }    
             if(txt_Outgoing.Text=="")
             {
                 MessageBox.Show("Nhập tổng chi trước khi tính doanh thu");
