@@ -130,3 +130,38 @@ C:\Users\Cuoc Thien\Desktop\DBMS_Thi\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCaf
 C:\Users\Cuoc Thien\Desktop\DBMS_Thi\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.CopyComplete
 C:\Users\Cuoc Thien\Desktop\DBMS_Thi\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.exe
 C:\Users\Cuoc Thien\Desktop\DBMS_Thi\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.pdb
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\QLQuanCafe.exe.config
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\QLQuanCafe.exe
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\QLQuanCafe.pdb
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\EntityFramework.dll
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\EntityFramework.SqlServer.dll
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\Guna.UI.dll
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\EntityFramework.xml
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\bin\Debug\EntityFramework.SqlServer.xml
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.csprojAssemblyReference.cache
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_AddMenu.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.frm_ComputeSalary.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.frm_ComputeTurnover.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.frm_EditMenuInfor.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_Manager.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.UCManageCustomers.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.UCMenu.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.UCTopStaff.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Admin.UCTurnover.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Both.frm_Top5inMenu.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.View.Customer.frm_Menu.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_AddCustomer.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_ChangePassword.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_StaffEditInformation.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_StaffRegister.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_Menu_Order.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.frm_Login.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.Properties.Resources.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.UCOrder.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.UCSalary.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.UCStaff.resources
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.GenerateResource.cache
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.CoreCompileInputs.cache
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.csproj.CopyComplete
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.exe
+D:\vy\study\HK1-20-21\DBMS\Project\DBMS_ThienVy\QLQuanCafe\obj\Debug\QLQuanCafe.pdb

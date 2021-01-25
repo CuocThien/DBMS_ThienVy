@@ -283,9 +283,9 @@ create role NhanVien
 Create role Khachhang
 go
 CREATE SCHEMA [RoleKhachhang]
-GO
+go
 CREATE SCHEMA [RoleNhanVien]
-GO
+go
 
 --Tạo login 
 sp_addlogin 'vyvy','123456'
@@ -359,7 +359,7 @@ create or alter view DoanhSo_view
 as
 select * from Turnover
 
-GO--lấy các món trong temp
+go--lấy các món trong temp
 create or alter view Temp_view
 as
 select * from Temp
@@ -367,12 +367,12 @@ select * from Temp
 go--xem bill
 create or alter view bill_view
 as select * from Bill
-go
+
 --TRIGGER
 
 --TURNOVER
 
-GO--Tính tiền thu vào bảng doanh thu
+go--Tính tiền thu vào bảng doanh thu
 create or alter trigger tg_thu on Turnover
 for insert
 as
@@ -397,6 +397,7 @@ begin
 	update Turnover set Profit=Earnings -Payroll- Outgoing
 end
 
+--SALARY
 go--Trigger tính lương
 create or alter trigger tg_luongnv on Salary
 for insert
@@ -405,6 +406,15 @@ begin
 	update Salary set Salary=Basic_Salary+KPI - Fine
 end
 
+go-- Thêm KPI vào bảng lương
+create or alter trigger tg_ThemKPI on Salary
+for insert
+as
+begin
+update Salary set Salary.KPI=KPI.Bonus from KPI where Salary.Id_Staff=KPI.Id_Staff and Month(KPI.PayDay) = MONTH(Salary.PayDay) and year(KPI.PayDay)=year(Salary.PayDay)
+end
+
+--TEMP
 go--Trigger tính price trong bảng temp
 create or alter trigger tg_Price on Temp
 for insert
@@ -421,6 +431,7 @@ begin
 	update Temp set Price=Quantity * (select Menu_view.Price from Menu_view where Temp.ID_Product=Menu_view.Id_Product and Temp.Size=Menu_view.Size)
 end
 
+--BILL
 go--Trigger tính price trong bill
 create or alter trigger tg_pricebill on Bill
 for insert
@@ -488,7 +499,7 @@ begin
 	update Bill set Total=Price - Discount
 end
 
-
+--CUSTOMER
 go--Update level chiết khấu cho khách
 Create or alter trigger tg_discountCus on Customer
 for update
@@ -505,6 +516,7 @@ begin
 end
 end
 
+--KPI
 go--Thêm Bonus cho nhân viên
 create or alter trigger tg_Bonus on KPI
 for insert
@@ -522,13 +534,6 @@ begin
 	update KPI set Bonus=((Result-Target)*10)/100 where Result >Target
 end
 
-go-- Thêm KPI vào bảng lương
-create or alter trigger tg_ThemKPI on Salary
-for insert
-as
-begin
-update Salary set Salary.KPI=KPI.Bonus from KPI where Salary.Id_Staff=KPI.Id_Staff and Month(KPI.PayDay) = MONTH(Salary.PayDay) and year(KPI.PayDay)=year(Salary.PayDay)
-end
 --CÁC FUNCTION DÙNG CHO HIỂN THỊ LÊN GIAO DIỆN ( TÌM KIẾM)
 	go ---Tạo function đăng nhập
 create or alter function func_ktlogin (@name nvarchar(max), @pass nvarchar(max))
@@ -893,7 +898,7 @@ begin
 EXEC sp_droplogin @user
 EXEC sp_dropuser @user
 end
-GO
+go
 
 --CUSTOMER
 go--Thêm khách
@@ -1053,7 +1058,6 @@ grant select on Menu_view to Khachhang --view
 
 --Tìm món
 grant select on func_TimMon to Khachhang --function
-grant select on func_LayLoai to Khachhang
 grant select on func_TimFandB to Khachhang
 grant select on func_TimMontheoLoai to Khachhang
 
@@ -1070,7 +1074,6 @@ grant select,update on Menu_view to NhanVien --view
 
 --Tìm món
 grant select on func_TimMon to NhanVien --function
-grant select on func_LayLoai to NhanVien
 grant select on func_TimFandB to NhanVien
 grant select on func_TimMontheoLoai to NhanVien
 grant select on func_TimMonTheoMa to NhanVien
@@ -1112,10 +1115,3 @@ grant exec on proc_SuaBill to NhanVien
 grant exec on proc_ThemOrder to NhanVien 
 grant exec on proc_suastatus to NhanVien 
 grant exec on proc_resetstatus to NhanVien
-
-select * from bill_view
-
-exec proc_ThemTemp '1','S','0985194510','TN1'
-
-exec proc_ThemOrder
-exec proc_ThemTemp '1','S','0333963285','TN1'
